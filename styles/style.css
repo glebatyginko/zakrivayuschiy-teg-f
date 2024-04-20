@@ -33,9 +33,24 @@
 }
 
 .header {
-  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 100%;
+  gap: 25px;
+  margin: 102px 0;
+  padding-block-end: 25px;
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-font);
+  background-color: var(--background-color);
 }
 
+.header__logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
 .header__logo-group {
   margin-block-start: 120px;
@@ -52,4 +67,16 @@
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.theme-menu__button {
+  border: none;
+  font-size: 14px;
+  background-color: inherit;
 }
