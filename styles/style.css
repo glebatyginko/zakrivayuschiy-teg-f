@@ -15,6 +15,41 @@
 */
 
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  font-variation-settings: var(--card-title-font-weight);
+  background-image:
+    repeating-linear-gradient(var(--stripes-gradient)),
+    repeating-linear-gradient(to right, var(--stripes-gradient)),
+    linear-gradient(var(--color-saturation-gradient));
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  margin: 100px 0;
+}
+
+
+.header__logo-group {
+  margin-block-start: 120px;
+}
+
+.header__logo {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header__title {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
