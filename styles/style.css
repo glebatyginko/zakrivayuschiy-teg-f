@@ -88,13 +88,15 @@
   content: ''; 
   position: absolute; 
   background-color: var(--accent-color);
-  left: 0; 
-  bottom: 0; 
+  left: 3px; 
+  bottom: -2px; 
+  inline-size: 90%;
+  block-size: 2px;
   transform: scaleX(0); 
   transition: transform 0.3s ease;
 }
 
-.menu-button:focus-visible::after {
+.theme-menu__button:focus-visible::after {
   transform: scaleX(1); 
 }
 
@@ -123,17 +125,21 @@
   content: "▶"; 
   position: absolute;
   left: -13px;
+  animation: sliding-arrow-animation 0.5s ease-in-out infinite alternate;
 }
 
+
+
 /* _________________________________MAIN_____________________________________________ */
+/* ---card--- */
 .main {
-  margin: 0 auto;
+  inline-size: 100%;
 }
 
 .main__card-list {
   display: flex;
   flex-direction: column;
-  gap: 52px;
+  gap: 51px;
 }
 
 .main__card-list-item {
@@ -162,8 +168,8 @@
 
 .image__text {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 22px;
+  right: 11px;
   font-family: var(--accent-font);
   font-size: 14px;
   opacity: 0.5;
@@ -188,30 +194,107 @@
   flex-direction: column;
   gap: 27px;
   border-top: 2px solid var(--accent-color);
-  padding: 25px 25px 25px;
+  padding: 25px 25px 23px;
 }
 
 .card__text {
   font-size: 18px;
+  line-height: 21px;
 }
 
-/* ---buttons--- */
+/* ---card-buttons--- */
 .card__button-container {
   display: flex;
-  gap: 12px;
+  gap: 4px;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 0 25px 25px;
 }
 
-.card__button {
+.main__card-button {
+  position: relative;
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
   color: var(--accent-color);
   font-family: var(--accent-font);
-  padding: 12px 37px;
+  padding: 0;
 }
 
-.card__button:hover {
+button:hover {
   cursor: pointer;
 }
+
+.main__card-button::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  inline-size: 0%;
+  block-size: 100%;
+  background-color: var(--accent-color);
+  transition: inline-size 0.5s ease-in-out;
+}
+
+.main__card-button:hover::before {
+  inline-size: 100%;
+}
+
+.card__icon-button {
+  block-size: 38px;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+}
+
+.card__like-button:focus,
+.save-container__save-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.button__text {
+  color: var(--accent-color);
+  font-size: 14px;
+}
+
+.contrast {
+  color: var(--contrast-color);
+  mix-blend-mode: difference;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+/* ______________________потом-------------- */
+.save-container {
+  padding: 54px 35px 102px;
+}
+
+.save-container__save-button {
+  inline-size: 306px;
+  block-size: 80px;
+}
+
+.save-button__diskette-icon {
+  block-size: 21px;
+  inline-size: 21px;
+}
+

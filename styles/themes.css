@@ -13,6 +13,9 @@
   --accent-color: #000000;
   --stripes-gradient: #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px;
   --color-saturation-gradient: #e7e7e7 0.01%, #1a1a1a 100%;
+  --contrast-color: #FFFFFF;
+  --contour-color: #000000;
+  --fill-color: #FF0000;
 }
 
 :root.theme-dark {
@@ -24,6 +27,9 @@
   --accent-color: #00CC14;
   --stripes-gradient: #000, #000 2px, transparent 2px, transparent 4px;
   --color-saturation-gradient: #007f0c 0.01%, #004306 100%;
+  --contrast-color: #00CC14;
+  --contour-color: #00CC14;
+  --fill-color: #FF0000;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,5 +42,8 @@
     --accent-color: #00CC14;
     --stripes-gradient: #000, #000 2px, transparent 2px, transparent 4px;
     --color-saturation-gradient: #007f0c 0.01%, #004306 100%;
+    --contrast-color: #00CC14;
+    --contour-color: #00CC14;
+    --fill-color: #FF0000;
   }
 }
