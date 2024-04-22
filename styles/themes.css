@@ -6,7 +6,7 @@
 */
 :root.theme-light {
   --main-font: Inter-Variable, sans-serif;
-  --accent-font: PressStart2P, joystix;
+  --accent-font: PressStart2P, fantasy;
   --card-title-font-weight: 700;
   --card-text-font-weight: 400;
   --background-color: #FFFFFF;
@@ -20,7 +20,7 @@
 
 :root.theme-dark {
   --main-font: Inter-Variable, sans-serif;
-  --accent-font: PressStart2P, joystix;
+  --accent-font: PressStart2P, fantasy;
   --card-title-font-weight: 785;
   --card-text-font-weight: 465;
   --background-color: #000000;
@@ -35,7 +35,7 @@
 @media (prefers-color-scheme: dark) {
   :root{
     --main-font: Inter-Variable, sans-serif;
-    --accent-font: PressStart2P, joystix;
+    --accent-font: PressStart2P, fantasy;
     --card-title-font-weight: 785;
     --card-text-font-weight: 465;
     --background-color: #000000;
