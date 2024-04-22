@@ -125,4 +125,3 @@
 .like-icon:not(.is-liked) .contour {
   animation: reset-contour 0.1s linear;
 }
-
