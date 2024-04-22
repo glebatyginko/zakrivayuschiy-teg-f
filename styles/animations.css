@@ -119,6 +119,7 @@
 
 .like-icon.is-liked .heart {
   animation: scale-heart 0.3s ease-in 0.1s alternate;
+  transform-origin: center;
 }
 
 .like-icon:not(.is-liked) .contour {
